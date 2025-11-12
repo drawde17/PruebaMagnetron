@@ -1,41 +1,214 @@
-# Prerequisites
-*.d
+# El siguiente comando funciona para descargar cuando se usa Git para Windows:
+# curl -LOf http://gist.githubusercontent.com/kmorcinek/2710267/raw/.gitignore
+#
+# Descarga este archivo usando PowerShell v3 en Windows con el siguiente comando:
+# Invoke-WebRequest https://gist.githubusercontent.com/kmorcinek/2710267/raw/ -OutFile .gitignore
+#
+# o wget:
+# wget --no-check-certificate http://gist.githubusercontent.com/kmorcinek/2710267/raw/.gitignore
+# Archivos específicos del usuario
+* .suo
+* .usuario
+* .sln.docstates
+# Generar resultados
+[ Dd ] ebug /
+[ Rr ] liberar /
+x64 /
+[ Bb ] en /
+[ Oo ] bj /
+La carpeta # build se utiliza actualmente para scripts de compilación y no debe ignorarse.
+# construir/
+# Paquetes NuGet
+* .nupkg
+La carpeta de paquetes puede ignorarse debido a la restauración de paquetes .
+** / paquetes / *
+# excepto build/, que se utiliza como objetivo de MSBuild.
+! ** / paquetes / compilación /
+# Descomenta si es necesario; sin embargo, generalmente se regenerará cuando sea necesario.
+# !**/packages/repositories.config
+Resultados de la prueba MSTest
+[ Tt ] est [ Rr ] resultado * /
+[ Bb ] construir [ Ll ] og. *
+* _i.c
+* _p.c
+* .ilk
+* .meta
+* .obj
+* .pch
+* .pdb
+* .pgc
+* .pgd
+* .rsp
+* .sbr
+* .tlb
+* .tli
+* .tlh
+* .tmp
+* .tmp_proj
+* .registro
+* .vspscc
+* .vssscc
+.builds
+* .pidb
+* .scc
+# Archivos de caché de Visual C++
+ipch /
+* .aps
+* .ncb
+* .opensdf
+* .sdf
+* .cachefile
+# Perfilador de Visual Studio
+* .psess
+* .vsp
+* .vspx
+# Kit de herramientas de automatización de la guía
+* .gpState
+# ReSharper es un complemento de codificación .NET
+_ReSharper * /
+* . [ Rr ] y [ Ss ] arpa
+# TeamCity es un complemento de compilación
+_TeamCity *
+# DotCover es una herramienta de cobertura de código
+* .dotCover
+# NCrunch
+* .ncrunch *
+. * crunch * .local.xml
+# Carpeta de salida de InstallShield
+[ Ee ] expreso /
+# DocProject es un complemento generador de documentación
+DocProject / buildhelp /
+DocProject / Ayuda / * .HxT
+DocProject / Ayuda / * .HxC
+DocProject / Ayuda / * .hhc
+DocProject / Ayuda / * .hhk
+DocProject / Ayuda / * .hhp
+DocProject / Ayuda / Html2
+DocProject / Ayuda / html
+# Directorio Click-Once
+publicar /
+# Publicar salida web
+* .Publish.xml
+# Salida de compilación de Windows Azure
+csx
+* .build.csdef
+# Directorio de paquetes de aplicaciones de la Tienda Windows
+Paquetes de aplicaciones /
+# Otros
+* .Caché
+ClientBin /
+[ Ss ] tyle [ Cc ] op. *
+~$ *
+* ~
+* .dbmdl
+* . [ Pp ] ublish.xml
+* .pfx
+* .publishsettings
+modulesbin /
+tempbin /
+# Archivo de sitio EPiServer (VPP)
+Datos de la aplicación /
+# Proyectos RIA/Silverlight
+Código_generado /
+# Copia de seguridad y archivos de informe de la conversión de un archivo de proyecto antiguo a uno más reciente
+# Versión de Visual Studio. No se necesitan archivos de copia de seguridad, porque tenemos Git ;-)
+_Archivos de informe de actualización /
+Respaldo * /
+Registro de actualización * .XML
+Registro de actualización * .htm
+# vim
+* .txt~
+* .swp
+* .swo
+# Archivos temporales al abrir LibreOffice en Ubuntu
+~bloquear. *
+# svn
+.svn
+# CVS - Control de versiones
+** / CVS /
+# Restos de la resolución de conflictos en el Control de código fuente
+* .orig
+# Archivos de SQL Server
+** / App_Data / * .mdf
+** / App_Data / * .ldf
+** / App_Data / * .sdf
+# Archivos generados por LightSwitch
+Artefactos generados /
+_Extensiones_Privadas /
+ModelManifest.xml
+# =========================
+# Restos de Windows
+# =========================
+# Caché de archivos de imagen de Windows
+Thumbs.db
+ehthumbs.db
+# Archivo de configuración de carpeta
+Escritorio.ini
+# Papelera de reciclaje utilizada en recursos compartidos de archivos
+$CONTENEDOR DE RECICLAJE /
+# Archivos generados por el sistema operativo #
+¿ Icono ?
+# Archivos de almacenamiento de servicios de escritorio de Mac
+Tienda DS
+# Caché del compilador SASS
+.sass-cache
+# Visual Studio 2014 CTP
+** / * .sln.ide
+# Algo temporal de Visual Studio
+.vs /
+# cosas de dotnet
+proyecto.bloqueo.json
+# VS 2015+
+* .vc.vc.opendb
+* .vc.db
+# Jinete
+.idea /
+# Código de Visual Studio
+.vscode /
+# Carpeta de salida utilizada por Webpack u otros componentes del frontend
+** / node_modules / *
+** / wwwroot / *
+# Específico de SpecFlow
+* .feature.cs
+* .feature.xlsx. *
+* .Especificaciones_ * .html
+# Proyectos UWP
+Paquetes de aplicaciones /
+# ####
+# Fin de la lista de elementos ignorados del núcleo; a continuación, coloque su configuración personalizada "por proyecto" (patrones o ruta).
+# ####
+@vishwasgupta
 
-# Compiled Object files
-*.slo
-*.lo
-*.o
-*.obj
+os cambios. No quiero subirlos (los archivos .dll y .pdb). ¿Alguien puede ayudarme?
+@Grauldon
+Grauldon
+comentó
+el 20 de abril de 2019
 
-# Precompiled Headers
-*.gch
-*.pch
+@GenebiUtilice el operador ! (No).
 
-# Linker files
-*.ilk
+!ruta/nombre de archivo
+@Grauldon
+Grauldon
+comentó
+el 20 de abril de 2019
+•
 
-# Debugger Files
-*.pdb
+@kmorcinekLos siguientes comandos también funcionan para la descarga al usar Git para Windows:
 
-# Compiled Dynamic libraries
-*.so
-*.dylib
-*.dll
+curl -LOf http://gist.githubusercontent.com/kmorcinek/2710267/raw/.gitignore
+curl -Of https://gist.githubusercontent.com/kmorcinek/2710267/raw/.gitignore
+@kmorcinek
+Autor
+kmorcinek
+comentó
+el 21 de abril de 2019
+•
 
-# Fortran module files
-*.mod
-*.smod
+@GrauldonGracias, listo. (añadido)
+@kmorcinek
+morcinek
+comentó
+el 21 de abril de 2019
+•
 
-# Compiled Static libraries
-*.lai
-*.la
-*.a
-*.lib
-
-# Executables
-*.exe
-*.out
-*.app
-
-# debug information files
-*.dwo
