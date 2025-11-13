@@ -13,11 +13,10 @@ namespace API.Controllers
     public class PersonaController : ControllerBase
     {
         private readonly IPersonaService _personaService;
-        private readonly ILogger<PersonaController> _logger;
+        //private readonly ILogger<PersonaController> _logger;
 
-        public PersonaController(ILogger<PersonaController> logger, IPersonaService personaService, MagnetronContext context)
+        public PersonaController(IPersonaService personaService, MagnetronContext context)
         {
-            _logger = logger;
             _personaService = personaService;
             _personaService.SetContext(context);
         }
