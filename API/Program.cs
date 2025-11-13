@@ -19,6 +19,8 @@ builder.Services.AddDbContext<MagnetronContext>(options => {
 
 builder.Services.AddScoped<IPersonaService, PersonaService>();
 builder.Services.AddScoped<IProductoService, ProductoService>();
+builder.Services.AddScoped<IFacturaService, FacturaService>();
+builder.Services.AddScoped<IReporteService, ReporteService>();
 
 var app = builder.Build();
 

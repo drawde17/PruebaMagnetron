@@ -3,6 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -30,6 +31,18 @@ namespace Infraestructure.Repository
         public IEnumerable<TEntity> Get() => _dbSet.ToList();
 
         public TEntity Get(int id) => _dbSet.Find(id);
+
+        public IEnumerable<TEntity> GetWithFilters(Expression<Func<TEntity, bool>> filter = null)
+        {
+            if (filter == null)
+            {
+                return _dbSet.ToList();
+            }
+            else
+            { 
+                return _dbSet.Where(filter).ToList();
+            }
+        }
 
         public void Save() => _context.SaveChanges();
 
