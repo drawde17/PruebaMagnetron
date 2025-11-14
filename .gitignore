@@ -212,3 +212,19 @@ comentó
 el 21 de abril de 2019
 •
 
+/.vs
+/API/.vs
+/API/bin
+/API/obj
+/API/Properties
+/Domain/bin
+/Domain/obj
+/Infraestructure/bin
+/Infraestructure/obj/Debug/net6.0
+/Infraestructure/obj
+/PruebasUnitarias/bin/Debug/net6.0
+/PruebasUnitarias/obj/Debug/net6.0
+/Service/bin
+/Service/obj/Debug/net6.0
+/Service/obj/Release/net6.0
+/Service/obj
